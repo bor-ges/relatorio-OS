@@ -30,7 +30,9 @@
             <!-- Page Content -->
             <main>
                 @yield("content")
+                @stack('js')
             </main>
         </div>
+
     </body>
 </html>
