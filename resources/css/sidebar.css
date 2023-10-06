@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+#default-sidebar {
+    width: 200px;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#progress {
+    width: 100%;
+}
+
+#perfil,
+.table-container {
+    width: calc(100% - 200px);
+}

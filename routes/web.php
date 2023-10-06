@@ -24,7 +24,7 @@ Route::get('/tecnicos/dashboard', function () {
 
 Route::get('/tecnicos/finalizacao', function () {
     return view('tecnicos.finalizacao');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('finalizacao');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
