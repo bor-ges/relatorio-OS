@@ -14,33 +14,6 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <style>
-            body {
-                font-family: sans-serif;
-            }
-
-            .container {
-                display: flex;
-                flex-direction: row;
-            }
-
-            #default-sidebar {
-                width: 200px;
-                min-width: 200px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            #progress {
-                width: 100%;
-            }
-
-            #perfil,
-            .table-container {
-                width: calc(100% - 200px);
-            }
-        </style>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -57,7 +30,11 @@
 
             <!-- Page Content -->
             <main>
-                @yield("content")
+                <div class="p-4 sm:ml-64">
+                    <div class="p-4 mt-14">
+                        @yield("content")
+                    </div>
+                </div>
                 @stack('js')
             </main>
         </div>
