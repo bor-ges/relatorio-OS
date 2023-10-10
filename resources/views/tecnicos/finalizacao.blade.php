@@ -27,14 +27,45 @@
                     <option >Técnico 2</option>
                 </select>
             </div>
-            <div class="col-span-3 row-start-2">adicionar materiais(feito com JS para adicionar um por um)</div>
+            <div class="col-span-3 row-start-2">
+            </div>
             <div class="col-start-4 row-start-2">hora inicio/fim(datepicker)</div>
-            <div class="row-start-3">serviço exec de acordo com cliente </div>
-            <div class="row-start-3">sem danos ao imovel</div>
-            <div class="row-start-3">Equipamentos e rede em funcionamento</div>
-            <div class="row-start-3">Com danos ao imóvel</div>
-            <div >Serviço cobrado</div>
-            <div class="row-start-4">Serviço insento de cobrança</div>
+            <div class="row-start-3">
+                <div class="flex items-center pl-3">
+                    <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                    <label for="vue-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Serviço executado de acordo com cliente</label>
+                </div>
+            </div>
+            <div class="row-start-3">
+                <div class="flex items-center pl-3">
+                    <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                    <label for="vue-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sem danos ao imovel</label>
+                </div>
+            </div>
+            <div class="row-start-3">
+                <div class="flex items-center pl-3">
+                    <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                    <label for="vue-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Equipamentos e rede em funcionamento</label>
+                </div>
+            </div>
+            <div class="row-start-3">
+                <div class="flex items-center pl-3">
+                    <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                    <label for="vue-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Com danos ao imóvel</label>
+                </div>
+            </div>
+            <div >
+                <div class="flex items-center pl-3">
+                    <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                    <label for="vue-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Serviço cobrado</label>
+                </div>
+            </div>
+            <div class="row-start-4">
+                <div class="flex items-center pl-3">
+                    <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                    <label for="vue-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Serviço insento de cobrança</label>
+                </div>
+            </div>
             <div class="row-start-5">
                 <div>
                     <label for="cli_nome" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nome do Cliente</label>
@@ -51,4 +82,6 @@
         </div>
     </form>
     </div>
+    @push('js')
+    @endpush
 @endsection
