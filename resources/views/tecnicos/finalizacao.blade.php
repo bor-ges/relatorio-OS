@@ -136,19 +136,21 @@
                     <label for="vue-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Serviço insento de cobrança</label>
                 </div>
             </div>
-            <div class="row-start-5">
+            <div class="col-start-3 row-start-4">
                 <div>
                     <label for="cli_nome" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nome do Cliente</label>
                     <input type="text" id="cli_nome" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
             </div>
-            <div class="row-start-5">
+            <div class="col-start-4 row-start-4">
                 <div>
                     <label for="cli_endereco" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Endereço do Cliente</label>
                     <input type="text" id="cli_endereco" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
             </div>
-            <div class="col-span-2 row-start-5">ASSINATURA DO CLIENTE</div>
+            <div class="row-start-5">ASSINATURA DO CLIENTE
+
+            </div>
         </div>
     </form>
     </div>
