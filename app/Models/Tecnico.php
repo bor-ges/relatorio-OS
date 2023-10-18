@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Tecnico extends Model
 {
     use HasFactory;
+
     protected $table = 'finaliza-os';
 
     protected $primaryKey = 'id';

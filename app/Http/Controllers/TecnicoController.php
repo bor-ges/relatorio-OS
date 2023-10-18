@@ -73,7 +73,7 @@ class TecnicoController extends Controller
      */
     public function show(Tecnico $tecnico)
     {
-        //
+        return view('dashboard')->compact($tecnico);
     }
 
     /**
@@ -108,21 +108,25 @@ class TecnicoController extends Controller
         ]);
 
 
-        $tecnico->numero_os = $validated['numero_os'];
-        $tecnico->tecnico_resp = $validated['tecnico_resp'];
-        $tecnico->inicio = $validated['inicio'];
-        $tecnico->fim = $validated['fim'];
-        $tecnico->tipo_os = $validated['tipo_os'];
-        $tecnico->materiais = $validated['materiais'];
-        $tecnico->sem_danos = $validated['sem_danos'];
-        $tecnico->com_danos = $validated['com_danos'];
-        $tecnico->funcionamento = $validated['funcionamento'];
-        $tecnico->servico_exec = $validated['servico_exec'];
-        $tecnico->isento_cobranca = $validated['isento_cobranca'];
-        $tecnico->servico_cobrado = $validated['cli_nome'];
-        $tecnico->cli_endereco = $validated['cli_assinatura'];
+        $tecnico->numero_os = $validated->numero_os;
+        $tecnico->tecnico_resp = $validated->tecnico_resp;
+        $tecnico->inicio = $validated->inicio;
+        $tecnico->fim = $validated->fim;
+        $tecnico->tipo_os = $validated->tipo_os;
+        $tecnico->materiais = $validated->materiais;
+        $tecnico->sem_danos = $validated->sem_danos;
+        $tecnico->com_danos = $validated->com_danos;
+        $tecnico->funcionamento = $validated->funcionamento;
+        $tecnico->servico_exec = $validated->servico_exec;
+        $tecnico->isento_cobranca = $validated->isento_cobranca;
+        $tecnico->servico_cobrado = $validated->cli_nome;
+        $tecnico->cli_nome = $validated->cli_nome;
+        $tecnico->cli_endereco = $validated->cli_endereco;
+        $tecnico->cli_assinatura = $validated->cli_assinatura;
 
         $tecnico->save();
+
+        return redirect ()->route('dashboard');
     }
 
     /**
