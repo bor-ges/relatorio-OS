@@ -1,10 +1,10 @@
 @extends("layouts.app")
 @section("content")
     <div class="container">
-    <form>
+    <form action="{{route('tecnico.store')}}">
     @csrf
     @method("POST")
-        <div class="grid grid-cols-4 grid-rows-5 gap-4">
+        <div class="grid grid-cols-4 grid-rows-6 gap-4">
             <div class="col-span-2">
                 <div>
                     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número da OS</label>
@@ -150,6 +150,9 @@
             </div>
             <div class="row-start-5">ASSINATURA DO CLIENTE
 
+            </div>
+            <div class="row-start-6 justify-center">
+                <button type="submit" class="justify-center text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Finalizar</button>
             </div>
         </div>
     </form>

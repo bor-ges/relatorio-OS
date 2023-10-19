@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('personal_access_tokens', function (Blueprint $table) {
+        Schema::create('finaliza-os', function (Blueprint $table) {
             $table->id();
             $table->string('numero_os')->nullable();
             $table->string('tecnico_resp')->nullable();
