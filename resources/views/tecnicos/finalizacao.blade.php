@@ -148,8 +148,8 @@
                     <input type="text" id="cli_endereco" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
             </div>
-            <div class="row-start-5">ASSINATURA DO CLIENTE
-
+            <div class="row-start-5">
+                <canvas class="border border-gray-300 rounded" id="signature-pad" width="400" height="100"></canvas>
             </div>
             <div class="row-start-6 justify-center">
                 <button type="submit" class="justify-center text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Finalizar</button>
@@ -158,5 +158,34 @@
     </form>
     </div>
 @push('js')
+    <script>
+    // Cria um objeto canvas
+    const canvas = document.getElementById("signature-pad");
+
+    // Cria um objeto context
+    const ctx = canvas.getContext("2d");
+
+    // Limpa o canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Cria um objeto para armazenar a assinatura
+    const signature = [];
+
+    // Adiciona um evento de clique
+    canvas.addEventListener("click", function(e) {
+    // Adiciona um ponto à assinatura
+    signature.push({
+    x: e.offsetX,
+    y: e.offsetY
+    });
+
+    // Desenha a assinatura
+    ctx.beginPath();
+    for (const point of signature) {
+    ctx.lineTo(point.x, point.y);
+    }
+    ctx.stroke();
+    });
+    </script>
 @endpush
 @endsection
