@@ -19,12 +19,12 @@ return new class extends Migration
             $table->string('fim')->nullable();
             $table->string('tipo_os')->nullable();
             $table->string('materiais')->nullable();
-            $table->string('sem_danos')->nullable();
-            $table->string('com_danos')->nullable();
-            $table->string('funcionamento')->nullable();
-            $table->string('serviço_exec')->nullable();
-            $table->string('isento_cobranca')->nullable();
-            $table->string('servico_cobrado')->nullable();
+            $table->string('sem_danos');
+            $table->string('com_danos');
+            $table->string('funcionamento');
+            $table->string('serviço_exec');
+            $table->string('isento_cobranca');
+            $table->string('servico_cobrado');
             $table->string('cli_nome')->nullable();
             $table->string('cli_endereco')->nullable();
             $table->string('cli_assinatura')->nullable();

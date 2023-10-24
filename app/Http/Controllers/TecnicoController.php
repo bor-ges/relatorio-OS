@@ -10,17 +10,17 @@ class TecnicoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Tecnico $tecnico)
     {
-        return view('tecnico.dashboard');
+        return view('tecnicos.dashboard', compact('tecnico'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Tecnico $tecnico)
     {
-        //
+        return view('tecnicos.finalizacao', compact('tecnico'));
     }
 
     /**
