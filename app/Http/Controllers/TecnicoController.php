@@ -4,15 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Tecnico;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class TecnicoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Tecnico $tecnico)
+    public function index()
     {
-        return view('tecnicos.dashboard', compact('tecnico'));
+        $tecnico = DB::table('sistema-os')->get();
+        return view('tecnicos.finalizacao', compact('tecnico'));
     }
 
     /**
@@ -73,7 +76,7 @@ class TecnicoController extends Controller
      */
     public function show(Tecnico $tecnico)
     {
-        return view('dashboard')->compact($tecnico);
+        return view('tecnico.finalizacao', compact('tecnico'));
     }
 
     /**
