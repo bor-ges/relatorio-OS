@@ -12,9 +12,9 @@ class TecnicoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Tecnico $tecnico)
     {
-        $tecnico = DB::table('sistema-os')->get();
+//        $tecnico = DB::table('sistema-os')->get();
         return view('tecnicos.finalizacao', compact('tecnico'));
     }
 
@@ -31,7 +31,8 @@ class TecnicoController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $tecnico = new Tecnico();
+        $tecnico->fill($request->validate([
             'numero_os' => 'required|numeric|mas:255',
             'tecnico_resp' => 'required|max:4294967295',
             'inicio' => 'requires|numeric|max:255',
@@ -47,23 +48,23 @@ class TecnicoController extends Controller
             'cli_nome' => 'required|max:255',
             'cli_endereco' => 'required|max:255',
             'cli_assinatura' => 'required|max:255'
-        ]);
+        ]));
 
-        $tecnico = new Tecnico();
+//        $tecnico = new Tecnico();
 
-        $tecnico->numero_os = $validated['numero_os'];
-        $tecnico->tecnico_resp = $validated['tecnico_resp'];
-        $tecnico->inicio = $validated['inicio'];
-        $tecnico->fim = $validated['fim'];
-        $tecnico->tipo_os = $validated['tipo_os'];
-        $tecnico->materiais = $validated['materiais'];
-        $tecnico->sem_danos = $validated['sem_danos'];
-        $tecnico->com_danos = $validated['com_danos'];
-        $tecnico->funcionamento = $validated['funcionamento'];
-        $tecnico->servico_exec = $validated['servico_exec'];
-        $tecnico->isento_cobranca = $validated['isento_cobranca'];
-        $tecnico->servico_cobrado = $validated['cli_nome'];
-        $tecnico->cli_endereco = $validated['cli_assinatura'];
+//        $tecnico->numero_os = $validated['numero_os'];
+//        $tecnico->tecnico_resp = $validated['tecnico_resp'];
+//        $tecnico->inicio = $validated['inicio'];
+//        $tecnico->fim = $validated['fim'];
+//        $tecnico->tipo_os = $validated['tipo_os'];
+//        $tecnico->materiais = $validated['materiais'];
+//        $tecnico->sem_danos = $validated['sem_danos'];
+//        $tecnico->com_danos = $validated['com_danos'];
+//        $tecnico->funcionamento = $validated['funcionamento'];
+//        $tecnico->servico_exec = $validated['servico_exec'];
+//        $tecnico->isento_cobranca = $validated['isento_cobranca'];
+//        $tecnico->servico_cobrado = $validated['cli_nome'];
+//        $tecnico->cli_endereco = $validated['cli_assinatura'];
 
         $tecnico->save();
 
