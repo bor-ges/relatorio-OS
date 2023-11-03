@@ -9,7 +9,7 @@ class Tecnico extends Model
 {
     use HasFactory;
 
-    protected $table = 'finaliza-os';
+    protected $table = 'sistema-os';
 
     protected $primaryKey = 'id';
     protected $fillable = [
