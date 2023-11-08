@@ -6,10 +6,10 @@
         <div class="px-8 ml-8 justify-itens-center col-span-3">
             <div class="flex justify-between mb-1 mt-10 mx-auto">
                 <span class="text-base font-medium text-blue-700 dark:text-white">Progresso do dia</span>
-                <span class="text-sm font-medium text-blue-700 dark:text-white">45%</span>
+                <span class="text-sm font-medium text-blue-700 dark:text-white">{{$perc_concluido}}%</span>
             </div>
             <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width:{{$perc_concluido}}%"></div>
             </div>
         </div>
 

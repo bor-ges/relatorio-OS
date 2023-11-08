@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Tecnico;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Carbon\Carbon;
 
 class TecnicoController extends Controller
 {
@@ -14,16 +12,16 @@ class TecnicoController extends Controller
      */
     public function index()
     {
-        $tecnico = DB::table('sistema-os')->get();
-        return view('tecnicos.dashboard', compact('tecnico'));
+        $perc_concluido = 20;
+        return view('tecnico.dashboard', compact('perc_concluido'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Tecnico $tecnico)
+    public function create()
     {
-        return view('tecnicos.finalizacao', compact('tecnico'));
+        return view('tecnico.finalizacao');
     }
 
     /**
@@ -48,7 +46,6 @@ class TecnicoController extends Controller
             'cli_endereco' => 'required|max:255',
             'cli_assinatura' => 'required|max:255'
         ]);
-
         $tecnico = new Tecnico();
 
         $tecnico->numero_os = $validated['numero_os'];
@@ -67,16 +64,15 @@ class TecnicoController extends Controller
 
         $tecnico->save();
 
-        return redirect()->route('dashboard');
+        return redirect()->route('dashboard', compact('tecnico'));
     }
-
 
     /**
      * Display the specified resource.
      */
     public function show(Tecnico $tecnico)
     {
-        return view('tecnico.finalizacao', compact('tecnico'));
+        //
     }
 
     /**
@@ -93,10 +89,10 @@ class TecnicoController extends Controller
     public function update(Request $request, Tecnico $tecnico)
     {
         $validated = $request->validate([
-            'numero_os' => 'required|numeric|mas:255',
-            'tecnico_resp' => 'required|max:4294967295',
-            'inicio' => 'requires|numeric|max:255',
-            'fim' => 'requires|numeric|max:255',
+            'numero_os' => 'required|numeric|max:255',
+            'tecnico_resp' => 'required|int|max:4294967295',
+            'inicio' => 'required|numeric|max:255',
+            'fim' => 'required|numeric|max:255',
             'tipo_os' => 'required|max:255',
             'materiais' => 'required|max:4294967295',
             'sem_danos' => 'required|max:255',
@@ -104,12 +100,10 @@ class TecnicoController extends Controller
             'funcionamento' => 'required|max:255',
             'servico_exec' => 'required|max:255',
             'insento_cobranca' => 'required|max:255',
-            'servico_cobrado' => 'required|max:255',
-            'cli_nome' => 'required|max:255',
-            'cli_endereco' => 'required|max:255',
-            'cli_assinatura' => 'required|max:255'
+            'cli_nome' => 'required|string|max:255',
+            'cli_endereco' => 'required|string|max:255',
+            'cli_assinatura' => 'required|string|max:255'
         ]);
-
 
         $tecnico->numero_os = $validated['numero_os'];
         $tecnico->tecnico_resp = $validated['tecnico_resp'];
@@ -122,12 +116,13 @@ class TecnicoController extends Controller
         $tecnico->funcionamento = $validated['funcionamento'];
         $tecnico->servico_exec = $validated['servico_exec'];
         $tecnico->isento_cobranca = $validated['isento_cobranca'];
-        $tecnico->servico_cobrado = $validated['cli_nome'];
-        $tecnico->cli_endereco = $validated['cli_assinatura'];
+        $tecnico->cli_nome = $validated['cli_nome'];
+        $tecnico->cli_endereco = $validated['cli_endereco'];
+        $tecnico->cli_assinatura = $validated['cli_assinatura'];
 
         $tecnico->save();
 
-        return redirect ()->route('dashboard');
+        return redirect()->route('dashboard');
     }
 
     /**

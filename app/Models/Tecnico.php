@@ -9,7 +9,7 @@ class Tecnico extends Model
 {
     use HasFactory;
 
-    protected $table = 'sistema-os';
+    protected $table = 'tecnico';
 
     protected $primaryKey = 'id';
     protected $fillable = [
@@ -23,7 +23,7 @@ class Tecnico extends Model
         'com_danos',
         'funcionamento',
         'servico_exec',
-        'insento_cobranca',
+        'isento_cobranca',
         'servico_cobrado',
         'cli_nome',
         'cli_endereco',
