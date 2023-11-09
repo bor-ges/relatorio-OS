@@ -9,8 +9,7 @@
                     </svg>
                 </button>
                 <a class="flex ml-2 md:mr-24">
-                    <img src="{{asset("/public/img/logo-2")}}" class="h-8 mr-3" alt="lab-intentoo" />
-                    <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Tec Intentoo</span>
+                    <img src="{{asset("/img/logo-2.png")}}" class="h-8 mr-3" alt="lab-intentoo" />
                 </a>
             </div>
             <div class="flex items-center">
