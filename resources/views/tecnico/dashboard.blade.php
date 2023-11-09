@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="d-flex grid grid-cols-4 grid-rows-2 gap-4" id="progress">
-        <div class="px-8 ml-8 justify-itens-center col-span-3">
+        <div class="px-8 pt-20 ml-8 justify-itens-center col-span-3">
             <div class="flex justify-between mb-1 mt-10 mx-auto">
                 <span class="text-base font-medium text-blue-700 dark:text-white">Progresso do dia</span>
                 <span class="text-sm font-medium text-blue-700 dark:text-white">{{$perc_concluido}}%</span>
@@ -15,10 +15,10 @@
 
         <div class="d-flex px-8 mt-10 col-start-4 id" id="perfil">
             <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <div class="flex flex-col items-center pb-10 ">
-                    <img class="w-16 h-16 mb-3 rounded-full shadow-lg" src="" alt="Bonnie image"/>
-                    <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Jorge Amado</h5>
-                    <span class="text-sm text-gray-500 dark:text-gray-400">Técnico de campo</span>
+                <div class="flex flex-col items-center pb-10 pt-10">
+                    <img class="w-16 h-16 mb-3 rounded-full shadow-lg" src="{{asset('/img/avatar-tec.jpeg')}}" alt="Bonnie image"/>
+                    <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Nome do tecnico</h5>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Função/Cargo</span>
                 </div>
             </div>
 
@@ -31,72 +31,61 @@
                         <thead>
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="col" class="p-4">
-                                Product name
+                                Numero da OS
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Color
+                                Tipo da OS
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Category
+                                Especificações
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Price
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                <span class="sr-only">Edit</span>
+                                <span class="sr-only">Editar</span>
                             </th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                Apple MacBook Pro 17"
+                                2315135613
                             </th>
                             <td class="px-6 py-4">
-                                Sliver
+                                remoção
                             </td>
                             <td class="px-6 py-4">
-                                Laptop
-                            </td>
-                            <td class="px-6 py-4">
-                                $2999
+                                tirar equipamento
                             </td>
                             <td class="px-6 py-4 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
                             </td>
                         </tr>
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                Microsoft Surface Pro
+                                6737463868
                             </th>
                             <td class="px-6 py-4">
-                                White
+                                instalação
                             </td>
                             <td class="px-6 py-4">
-                                Laptop PC
-                            </td>
-                            <td class="px-6 py-4">
-                                $1999
+                                nova instalação
                             </td>
                             <td class="px-6 py-4 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
                             </td>
                         </tr>
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                Magic Mouse 2
+                                847694734
                             </th>
                             <td class="px-6 py-4">
-                                Black
+                                manutenção
                             </td>
                             <td class="px-6 py-4">
-                                Accessories
+                                resolução de problemas
                             </td>
-                            <td class="px-6 py-4">
-                                $99
-                            </td>
+
                             <td class="px-6 py-4 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
                             </td>
                         </tr>
                         </tbody>
